@@ -15,15 +15,8 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["store"],
   },
-  nitro: {
-    baseURL: "/adam-eats/",
-    prerender: {
-      crawlLinks: true,
-      failOnError: false,
-    },
-  },
   modules: [
-    "nuxt-icon",
+    ["nuxt-icon"],
     [
       "@pinia/nuxt",
       {

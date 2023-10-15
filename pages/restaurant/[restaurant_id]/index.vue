@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     getStore() {
-      return this.storeStore.getStoreById(this.$route.params.restaurant_id);
+      return this.storeStore.getStoreById(useRoute().params.restaurant_id);
     },
   },
 };

@@ -17,7 +17,7 @@ export default {
   computed: {
     product() {
       return this.storeStore.getProduct(
-        this.$route.params.restaurant_id,
+        useRoute().params.restaurant_id,
         this.productId
       );
     },

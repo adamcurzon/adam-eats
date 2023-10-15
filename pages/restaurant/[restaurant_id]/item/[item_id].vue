@@ -1,7 +1,7 @@
 <template>
   <div class="container padding">
     <NuxtLink
-      :to="'/restaurant/' + this.$route.params.restaurant_id + '/'"
+      :to="'/restaurant/' + useRoute().params.restaurant_id + '/'"
       class="padding-y text-grey flex flex-gap-20 flex-center"
     >
       <Icon name="material-symbols:arrow-back" /> Back to {{ storeName }}
@@ -34,12 +34,12 @@ export default {
   computed: {
     product() {
       return this.storeStore.getProduct(
-        this.$route.params.restaurant_id,
-        this.$route.params.item_id
+        useRoute().params.restaurant_id,
+        useRoute().params.item_id
       );
     },
     storeName() {
-      return this.storeStore.getStoreNameById(this.$route.params.restaurant_id);
+      return this.storeStore.getStoreNameById(useRoute().params.restaurant_id);
     },
   },
 };
