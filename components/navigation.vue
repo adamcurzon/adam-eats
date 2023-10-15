@@ -1,10 +1,15 @@
 <template>
   <nav>
-    <p>Adam <b>Eats</b></p>
+    <div>
+      <button class="clear">
+        <Icon name="material-symbols:menu-rounded" color="black" />
+      </button>
+      <NuxtLink to="/">
+        <p>Adam <b>Eats</b></p>
+      </NuxtLink>
+    </div>
     <ul>
-      <li><NuxtLink to="/">Home</NuxtLink></li>
-      <li><NuxtLink to="/restaurant">Restaurant</NuxtLink></li>
-      <li><NuxtLink to="/item">Item</NuxtLink></li>
+      <li><NuxtLink to="/cart">Cart</NuxtLink></li>
     </ul>
   </nav>
 </template>

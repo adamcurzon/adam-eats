@@ -1,5 +1,6 @@
 <template>
-    <div>
-     <h1>Home</h1>   
-    </div>
+  <div class="flex">
+    <RestaurantFilters />
+    <RestaurantList />
+  </div>
 </template>
