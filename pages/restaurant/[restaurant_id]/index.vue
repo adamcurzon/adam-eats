@@ -3,7 +3,7 @@
 <template>
   <div>
     <div class="full-banner">
-      <img :src="'/images/restaurants/' + getStore.image" />
+      <img :src="'/adam-eats/images/restaurants/' + getStore.image" />
     </div>
     <div class="padding-x padding-bottom">
       <h1>{{ getStore.name }}</h1>

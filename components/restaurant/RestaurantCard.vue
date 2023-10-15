@@ -1,6 +1,6 @@
 <template>
   <NuxtLink :to="'/restaurant/' + id + '/'" class="restaurant-card">
-    <img :src="'/images/restaurants/' + store.image" />
+    <img :src="'/adam-eats/images/restaurants/' + store.image" />
     <p class="flex flex-between">
       {{ store.name }}
       <span class="restaurant-rating text-small">{{ store.rating }}</span>

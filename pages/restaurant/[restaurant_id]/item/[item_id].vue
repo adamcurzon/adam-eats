@@ -7,7 +7,7 @@
       <Icon name="material-symbols:arrow-back" /> Back to {{ storeName }}
     </NuxtLink>
     <div class="flex">
-      <img class="width-50" :src="'/images/items/' + product.image" />
+      <img class="width-50" :src="'/adam-eats/images/items/' + product.image" />
       <div class="flex flex-column flex-gap-20 width-50">
         <h1>{{ product.name }}</h1>
         <p>{{ product.price }}</p>
