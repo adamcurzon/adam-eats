@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   target: "static",
   nitro: { prerender: { failOnError: false } },
+  ssr: false,
   app: {
     baseURL: "/adam-eats/",
     buildAssetsDir: "assets",
