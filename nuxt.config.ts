@@ -1,32 +1,37 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  target: 'static',
+  target: "static",
+  nitro: { prerender: { failOnError: false } },
   app: {
-    baseURL: '/adam-eats/',
-    buildAssetsDir: 'assets',
+    baseURL: "/adam-eats/",
+    buildAssetsDir: "assets",
   },
   devtools: { enabled: true },
   css: [`assets/css/main.css`],
   components: [
     {
-      path: '~/components',
+      path: "~/components",
       pathPrefix: false,
     },
   ],
   imports: {
-    dirs: ['store']
+    dirs: ["store"],
   },
   modules: [
-    ['nuxt-icon'],
-    ['@pinia/nuxt', 
+    ["nuxt-icon"],
+    [
+      "@pinia/nuxt",
       {
-      autoImports: ['defineStore']
-      }
+        autoImports: ["defineStore"],
+      },
     ],
-    ['@nuxtjs/google-fonts', {
-      families: {
-        'Rubik': [300,400,700],
-      }
-    }],
-  ]
-})
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          Rubik: [300, 400, 700],
+        },
+      },
+    ],
+  ],
+});
