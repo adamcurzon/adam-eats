@@ -3,10 +3,6 @@ export default defineNuxtConfig({
   target: "static",
   nitro: { prerender: { failOnError: false } },
   ssr: false,
-  app: {
-    baseURL: "/adam-eats/",
-    buildAssetsDir: "assets",
-  },
   devtools: { enabled: true },
   css: [`assets/css/main.css`],
   components: [
