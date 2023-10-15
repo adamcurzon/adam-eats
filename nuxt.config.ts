@@ -1,8 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  target: "static",
-  nitro: { prerender: { failOnError: false } },
-  ssr: false,
+  app: {
+    baseURL: "/adam-eats/",
+    buildAssetsDir: "assets",
+  },
   devtools: { enabled: true },
   css: [`assets/css/main.css`],
   components: [
@@ -14,8 +15,15 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["store"],
   },
+  nitro: {
+    baseURL: "/adam-eats/",
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+    },
+  },
   modules: [
-    ["nuxt-icon"],
+    "nuxt-icon",
     [
       "@pinia/nuxt",
       {
